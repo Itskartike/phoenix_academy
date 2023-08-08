@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Subject Predictor</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='predictor.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script>
+        function displayRadioValue(){
+            var c="Engineering";
+            var b="Medical";
+            var a="Confuse";
+      var radios = document.getElementsByName('Intrested');
+
+for (var i = 0, length = radios.length; i < length; i++) {
+  if (radios[i].checked) {
+    if(radios[i].value==c){
+    // do whatever you want with the checked radio
+    window.open('Engineering.html');
+    }
+    else if(radios[i].value==b){
+        window.open('Medical.html');
+    }
+    else if(radios[i].value==a){
+        window.open('Confuse.html');
+    }
+  }
+}
+        }
+    </script>
+</head>
+<body>
+    
+    <div class="name"><h1>Subject Predictor For 11<sup>th</sup> Science Aspirants</h1></div>
+  <form action="https://formspree.io/f/xqkovlne" method="post">
+    <div class="info">
+        <b>Name:</b><input type="text" name="Name" id="Name" required><br><br>
+        <b>Mobile No.<input type="tel" name="Number" id="Number" required></b><br><br>
+        <b>Email Id:</b> <input type="email" name="Mail" id="Mail" required><br><br>
+        <b>City:</b><input type="text" name="City" id="City"><br><br>
+        <b>School Name:<input type="text" name="School" id="School"></b><br><br>
+        <b><label for="board">Select Board:</label>
+            <select name="Board" id="Board">
+              <option value="cbse">CBSE</option>
+              <option value="ssc" selected>SSC</option>
+              <option value="icse">ICSE</option>
+              <option value="other">Other</option>
+            </select></b><br><br>
+        <b>10<sup>th</sup> Score:</b><input type="number" name="Score" id="Score"><br><br>
+
+        <b>In which field you are Intrested After  12<sup>th</sup> ?</b>
+        <br><br>
+        <input name="Intrested"type="radio" value="Engineering" ><b>Engineering</b><br><br>
+        <input name="Intrested" type="radio" value="Medical" ><b>Medical</b><br><br>
+        <input name="Intrested" type="radio" value="Confuse" ><b>Confused</b>
+
+        <input type="submit" class="button"  onclick="displayRadioValue()" >
+        </div>
+    </form>
+      <h4><p style="color: black; text-align: center; background-color: rgba(218, 104, 104, 0.347);">Made with <i class="fa fa-heart" style="font-size:15px;color:red;"></i> By Hukum Kumar <br>Student Of  12<sup>th</sup> Science Phoenix Academy</sup></p></h4>
+</body>
+</html>
